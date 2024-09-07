@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <title>Hud</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="player-wrapper">
+        <svg class="circle" id="health" width="50" height="50">
+          <circle
+            class="progressplayer health"
+            id="health-circle"
+            stroke="#26CE42"
+            stroke-width="5.0"
+            style="stroke-opacity: 1"
+            fill="#1e1e1e"
+            r="20"
+            cx="24"
+            cy="24"
+            stroke-dasharray="70 30"
+            stroke-dashoffset="0"
+          />
+          <image
+            href="./images/health.png"
+            height="17"
+            width="17"
+            x="30%"
+            y="35.5%"
+          ></image>
+        </svg>
+
+        <svg class="circle" id="armour" width="50" height="50">
+          <circle
+            class="progressplayer armour"
+            id="armour-circle"
+            stroke="#CE4226"
+            stroke-width="5.0"
+            style="stroke-opacity: 1"
+            fill="#1e1e1e"
+            r="20"
+            cx="24"
+            cy="24"
+            stroke-dasharray="70 30"
+            stroke-dashoffset="0"
+          />
+          <image
+            href="./images/armour.png"
+            height="17"
+            width="17"
+            x="30%"
+            y="35.5%"
+          ></image>
+        </svg>
+
+        <svg class="circle" id="hunger" width="50" height="50">
+          <circle
+            class="progressplayer hunger"
+            id="hunger-circle"
+            stroke="#CE9926"
+            stroke-width="5.0"
+            style="stroke-opacity: 1"
+            fill="#1e1e1e"
+            r="20"
+            cx="24"
+            cy="24"
+            stroke-dasharray="70 30"
+            stroke-dashoffset="0"
+          />
+          <image
+            href="./images/hunger.png"
+            height="17"
+            width="17"
+            x="30%"
+            y="35.5%"
+          ></image>
+        </svg>
+
+        <svg class="circle" id="thirst" width="50" height="50">
+          <circle
+            class="progressplayer thirst"
+            id="thirst-circle"
+            stroke="#2675CE"
+            stroke-width="5.0"
+            style="stroke-opacity: 1"
+            fill="#1e1e1e"
+            r="20"
+            cx="24"
+            cy="24"
+            stroke-dasharray="70 30"
+            stroke-dashoffset="0"
+          />
+          <image
+            href="./images/thirst.png"
+            height="17"
+            width="17"
+            x="30%"
+            y="35.5%"
+          ></image>
+        </svg>
+
+        <svg class="circle" id="stamina" width="50" height="50">
+          <circle
+            class="progressplayer stamina"
+            id="stamina-circle"
+            stroke="#8426CE"
+            stroke-width="5.0"
+            style="stroke-opacity: 1"
+            fill="#1e1e1e"
+            r="20"
+            cx="24"
+            cy="24"
+            stroke-dasharray="70 30"
+            stroke-dashoffset="0"
+          />
+          <image
+            href="./images/stamina.png"
+            height="17"
+            width="17"
+            x="30%"
+            y="35.5%"
+          ></image>
+        </svg>
+
+        <svg class="circle" id="oxygen" width="50" height="50">
+          <circle
+            class="progressplayer oxygen"
+            id="oxygen-circle"
+            stroke="#CE26CE"
+            stroke-width="5.0"
+            style="stroke-opacity: 1"
+            fill="#1e1e1e"
+            r="20"
+            cx="24"
+            cy="24"
+            stroke-dasharray="70 30"
+            stroke-dashoffset="0"
+          />
+          <image
+            href="./images/oxygen.png"
+            height="17"
+            width="17"
+            x="30%"
+            y="35.5%"
+          ></image>
+        </svg>
+      </div>
+
+      
+      <div class="car-wrapper">
+        <div id="speedometer">
+          <div id="speedLimit">
+						<div id="textSpeedLimit"></div>
+					</div>
+          <div id="progress-speed">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" class="mask" />
+              <circle cx="50" cy="50" r="45" class="speed zero" />
+            </svg>
+          </div>
+          <div class="speedometer-info">
+            <i class="fa-solid fa-gas-pump"> <b id="vehicleFuel">EMPTY</b></i><br>
+            <!-- <i><img style="width:15px;height:10px;" src="images/vehicle-gear.png?size"> <b id="gear">N</b></i> -->
+            <h1 id="speed">0</h1>
+            <h1 id="displaytext"></h1>
+            <!-- <h1>KM/H</h1> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>

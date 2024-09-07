@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  display: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.progressplayer {
+  -webkit-transition: 0.35s stroke-dashoffset;
+  -o-transition: 0.35s stroke-dashoffset;
+  transition: 0.35s stroke-dashoffset;
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  overflow: none;
+  stroke-linecap: round;
+}
+
+.player-wrapper {
+  /* position: absolute;
+  bottom: 0;
+  left: 1.7rem; */
+
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* justify-content: right; */
+  bottom: 10px;
+}
+
+.car-wrapper {
+  position: absolute;
+  bottom: 7.5rem;
+  right: 7.5rem;
+}
+
+#speed-circle {
+  transform: rotate(35deg);
+}
+
+#fuel-circle {
+  transform: rotate(35deg);
+}
+
+.speed-display {
+  position: absolute;
+  margin: auto;
+  width: 7%;
+  right: 8%;
+  bottom: 7.5%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-size: 80%;
+  border: 3px solid #1a1a1a;
+  background-color: #1a1a1ae1;
+}
+
+#speedometer svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(138deg);
+  width: 10rem;
+}
+
+.speedometer-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+#speedometer svg circle {
+  display: block;
+  fill: transparent;
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 75;
+  transform-origin: 50% 50%;
+}
+#speedometer svg circle.mask {
+  stroke: rgba(0, 0, 0, 0.35);
+}
+#speedometer svg circle.speed {
+  stroke: url(#speed-gradient);
+  stroke-dashoffset: 180;
+  stroke: #00c3ff;
+}
+#speedometer svg:first-child {
+  z-index: 11;
+}
+
+#speedometer svg circle {
+  transition: all 250ms linear;
+}
+
+@keyframes blink {
+	0% {
+		color: red;
+	}
+	49% {
+		color:red;
+	}
+	50% {
+		color: black;
+	}
+}
+
+.blink {
+	animation-name: blink;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+#textSpeedLimit {
+	color:black;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	grid-area: textSpeedLimit;
+}
+
+#speedLimit {
+  position: absolute;
+  right: 90px;
+	width:2em;
+	vertical-align: center;
+	text-align: center;
+	font-size: 20px;
+	aspect-ratio:1;
+	border-radius:1em;
+	background-color:white;
+    background-clip:content-box;
+    border:3px solid #ff0000;
+	/* grid-area:speedLimit; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
